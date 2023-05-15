@@ -26,6 +26,7 @@ describe("capitalize", () => {
 describe("generateInitials", () => {
   test("returns the initials of a firstname and surname", () => {
     expect(generateInitials("Frederic", "Bonneville")).toBe("F.B");
+    expect(generateInitials("Cheris", "Quessou")).toBe("C.Q");
   });
 });
 
