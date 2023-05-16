@@ -44,22 +44,35 @@ export function getSalePrice(originalPrice, reduction) {
 
 export function getMiddleCharacter(str) {
 	if (str === undefined) throw new Error('str is required');
-	// Add your code here!
+	
+	const middle = Math.floor(str.length / 2);
+
+	return str.length % 2 === 0 ? str.slice(middle - 1, middle + 1) : str.slice(middle, middle + 1);
 }
 
 export function reverseWord(word) {
 	if (word === undefined) throw new Error('word is required');
-	// Add your code here!
+	
+	const arrayStrings = word.split("");
+
+	const reverseArray = arrayStrings.reverse();
+
+	const joinArray = reverseArray.join("");
+
+	return joinArray;
 }
 
 export function reverseAllWords(words) {
 	if (words === undefined) throw new Error('words is required');
-	// Add your code here!
+	
+	const reversedWords = words.map(word => word.split('').reverse().join(''));
+
+	return reversedWords;
 }
 
 export function countLinuxUsers(users) {
 	if (users === undefined) throw new Error('users is required');
-	// Add your code here!
+	
 }
 
 export function getMeanScore(scores) {
