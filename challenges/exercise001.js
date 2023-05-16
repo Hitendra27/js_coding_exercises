@@ -87,7 +87,7 @@ export function getMeanScore(scores) {
 	let total = 0;
 	let count = 0;
 
-	scores.forEach((item, index) => {
+	scores.forEach((item) => {
 		total += item;
 		count++;
 	});
