@@ -80,10 +80,29 @@ export function countLinuxUsers(users) {
 
 export function getMeanScore(scores) {
 	if (scores === undefined) throw new Error('scores is required');
-	// Add your code here!
+	
+	let total = 0;
+	let count = 0;
+
+	scores.forEach((item, index) => {
+		total += item;
+		count++;
+	});
+
+	const meanScore = total / count;
+	return parseFloat(meanScore.toFixed(2));
 }
 
 export function simpleFizzBuzz(n) {
 	if (n === undefined) throw new Error('n is required');
-	// Add your code here!
+	
+	if(n % 3 === 0 && n % 5 === 0) {
+		return "fizzbuzz";
+	} else if(n % 3 == 0) {
+		return "fizz";
+	} else if(n % 5 == 0) {
+		return "buzz";
+	} else {
+		return n;
+	}
 }
