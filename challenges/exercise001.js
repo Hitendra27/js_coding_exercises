@@ -6,6 +6,7 @@
 
 export function capitalize(word) {
 	if (word === undefined) throw new Error('word is required');
+
 	const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
 
 	return capitalized;
@@ -14,8 +15,10 @@ export function capitalize(word) {
 export function generateInitials(firstName, lastName) {
 	if (firstName === undefined) throw new Error('firstName is required');
 	if (lastName === undefined) throw new Error('lastName is required');
+
 	const firstNameIn = firstName[0].charAt(0).toUpperCase()
 	const lastNameIn = lastName.charAt(0).toUpperCase()
+
 	return `${firstNameIn}.${lastNameIn}`
 }
 
@@ -90,6 +93,7 @@ export function getMeanScore(scores) {
 	});
 
 	const meanScore = total / count;
+	
 	return parseFloat(meanScore.toFixed(2));
 }
 
