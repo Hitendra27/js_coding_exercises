@@ -149,3 +149,8 @@ You should fix any errors before adding and commiting your code.
 # 🔥 The first challenge 🔥
 
 Open [the first challenge instructions](docs/exercise001.md) to get started! 🙌
+
+### Screenshots of test passed in challenges.
+
+<img width="1440" alt="Screenshot 2023-05-16 at 22 56 07" src="https://github.com/Hitendra27/js_coding_exercises/assets/73651340/e581f090-12a5-4753-8b9c-4e7dcbb6c163">
+
