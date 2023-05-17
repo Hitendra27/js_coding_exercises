@@ -7,6 +7,8 @@ export function getFillings(sandwich) {
 export function isFromManchester(person) {
 	if (person === undefined) throw new Error('person is required');
 
+	// can use Ternery operator ? : 
+	
 	if(person.city === 'Manchester') {
 		return true;
 	}
