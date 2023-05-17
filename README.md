@@ -154,5 +154,7 @@ Open [the first challenge instructions](docs/exercise001.md) to get started! ğŸ™
 
 <img width="1440" alt="Screenshot 2023-05-16 at 22 56 07" src="https://github.com/Hitendra27/js_coding_exercises/assets/73651340/e581f090-12a5-4753-8b9c-4e7dcbb6c163">
 
+<img width="1440" alt="Screenshot 2023-05-16 at 22 56 07" src="https://github.com/Hitendra27/js_coding_exercises/assets/73651340/1ece1946-f043-498e-9981-faf1e8c17581">
 
+<img width="1440" alt="Screenshot 2023-05-17 at 19 19 28" src="https://github.com/Hitendra27/js_coding_exercises/assets/73651340/d75d2b72-ae9f-448a-b6e3-0c97f80c84e2">
 
