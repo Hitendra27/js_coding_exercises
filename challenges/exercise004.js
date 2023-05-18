@@ -11,13 +11,18 @@ export function findSmallNums(nums) {
 	}
 
 	return smallNumbers;
+
+	// // for Each
+	// nums.array.forEach(element => {
+	// 	element < 1
+	// });
 }
 
 export function findNamesBeginningWith(names, char) {
 	if (!names) throw new Error('names is required');
 	if (!char) throw new Error('char is required');
 	
-	// for loop
+	//for loop
 	const newName = [];
 
 	for(let i = 0; i < names.length; i++) {
@@ -46,23 +51,68 @@ export function findVerbs(words) {
 
 export function getIntegers(nums) {
 	if (!nums) throw new Error('nums is required');
-	// Your code here
+	
+	// for loop
+	const arr = [];
+
+	for(let i = 0; i < nums.length; i++) {
+		if(Number.isInteger(nums[i])) {
+			arr.push(nums[i]);
+		}
+	}
+
+	return arr;
 }
 
 export function getCities(users) {
 	if (!users) throw new Error('users is required');
-	// Your code here
+	// for loop
+
+	const userCity = [];
+
+	for(let i = 0; i < users.length; i++) {
+		userCity.push(users[i].data.city.displayName);
+	}
+
+	return userCity;
 }
 
 export function getSquareRoots(nums) {
 	if (!nums) throw new Error('nums is required');
-	// Your code here
+	
+	// for loop
+
+	//Math.sqrt(number) -> sqrt formula
+
+	const numbers = [];
+
+	for(let i = 0; i < nums.length; i++) {
+		const squareRoot = Math.sqrt(nums[i]);
+		const roundedSquareRoot = squareRoot.toFixed(2);
+		numbers.push(parseFloat(roundedSquareRoot));
+	}
+
+	return numbers;
 }
 
 export function findSentencesContaining(sentences, str) {
 	if (!sentences) throw new Error('sentences is required');
 	if (!str) throw new Error('str is required');
-	// Your code here
+	
+	// for loop
+
+	const result = [];
+
+	for(let i = 0; i < sentences.length; i++) {
+		const sentence = sentences[i].toLowerCase();
+		const searchStr = str.toLowerCase();
+
+		if(sentence.includes(searchStr)) {
+			result.push(sentences[i]);
+		}
+	}
+
+	return result;
 }
 
 export function getLongestSides(triangles) {
