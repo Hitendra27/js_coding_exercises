@@ -207,15 +207,25 @@ export function findSentencesContaining(sentences, str) {
 	// return result;
 
 	// for Each
-	const result = [];
+	// const result = [];
 
-	sentences.forEach(el => {
+	// sentences.forEach(el => {
+	// 	const sentence = el.toLowerCase();
+	// 	const searchStr = str.toLowerCase();
+
+	// 	if(sentence.includes(searchStr)) {
+	// 		result.push(el);
+	// 	}
+	// });
+
+	// return result;
+
+	// filter
+	const result = sentences.filter(el => {
 		const sentence = el.toLowerCase();
 		const searchStr = str.toLowerCase();
 
-		if(sentence.includes(searchStr)) {
-			result.push(el);
-		}
+		return sentence.includes(searchStr);
 	});
 
 	return result;
@@ -244,18 +254,33 @@ export function getLongestSides(triangles) {
 	// return longestSlides;
 
 	// for Each
-	const longestSlides = [];
+	// const longestSlides = [];
 
-	triangles.forEach(element => {
+	// triangles.forEach(element => {
+	// 	let longestSlide = 0;
+
+	// 	element.forEach(side => {
+	// 		if(side > longestSlide) {
+	// 			longestSlide = side;
+	// 		}
+	// 	});
+
+	// 	longestSlides.push(longestSlide);
+	// });
+
+	// return longestSlides;
+
+	//map
+	const longestSlides = triangles.map(triangle => {
 		let longestSlide = 0;
 
-		element.forEach(side => {
+		triangle.forEach(side => {
 			if(side > longestSlide) {
 				longestSlide = side;
 			}
 		});
 
-		longestSlides.push(longestSlide);
+		return longestSlide;
 	});
 
 	return longestSlides;
