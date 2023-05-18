@@ -13,14 +13,19 @@ export function findSmallNums(nums) {
 	// return smallNumbers;
 
 	// for Each
-	const smallNumbers = [];
+	// const smallNumbers = [];
 
-	nums.forEach(element => {
-		if(element < 1) {
-			smallNumbers.push(element);
-		}
-	});
+	// nums.forEach(element => {
+	// 	if(element < 1) {
+	// 		smallNumbers.push(element);
+	// 	}
+	// });
 
+	// return smallNumbers;
+
+	// filter
+
+	const smallNumbers = nums.filter(el => el < 1);
 	return smallNumbers;
 }
 
@@ -40,15 +45,21 @@ export function findNamesBeginningWith(names, char) {
 	// return newName;
 
 	// for Each
-	const newName = [];
+	// const newName = [];
 
-	names.forEach(element => {
-		if(element.charAt(0) === char) {
-			newName.push(element);
-		}
-	});
+	// names.forEach(element => {
+	// 	if(element.charAt(0) === char) {
+	// 		newName.push(element);
+	// 	}
+	// });
 
+	// return newName;
+
+	// filter
+	const newName = names.filter(el => el.charAt(0) === char);
 	return newName;
+
+	
 }
 
 export function findVerbs(words) {
