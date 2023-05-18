@@ -1,12 +1,30 @@
 export const findNextNumber = (nums, n) => {
 	if (nums === undefined) throw new Error('nums is required');
 	if (n === undefined) throw new Error('n is required');
-	// Your code here!
+	
+	const index = nums.indexOf(n);
+	if(index === -1 || index === nums.length - 1) {
+		return null;
+	}
+	return nums[index + 1];
 };
 
 export const count1sand0s = (str) => {
 	if (str === undefined) throw new Error('str is required');
-	// Your code here!
+	
+	const frequencies = {
+		1: 0,
+		0: 0
+	};
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+	if (char === '1' || char === '0') {
+		frequencies[char] += 1;
+	}
+  }
+
+  return frequencies;
 };
 
 export const reverseNumber = (n) => {
@@ -32,5 +50,6 @@ export const findNeedle = (haystack, searchTerm) => {
 
 export const getWordFrequencies = (str) => {
 	if (str === undefined) throw new Error('str is required');
-	// Your code here!
+	
+	//const frequencies = {};
 };
