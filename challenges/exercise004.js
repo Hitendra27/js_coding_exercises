@@ -191,22 +191,40 @@ export function findSentencesContaining(sentences, str) {
 
 export function getLongestSides(triangles) {
 	if (!triangles) throw new Error('triangles is required');
-	// for loop
+
+	// // for loop
+	// const longestSlides = [];
+
+	// for(let i = 0; i < triangles.length; i++) {
+	// 	const triangle = triangles[i];
+	// 	let longestSlide = 0;
+
+	// 	for(let j = 0; j < triangle.length; j++) {
+	// 		if(triangle[j] > longestSlide) {
+	// 			longestSlide = triangle[j];
+	// 		}
+	// 	}
+
+	// 	longestSlides.push(longestSlide);
+
+	// }
+
+	// return longestSlides;
+
+	// for Each
 	const longestSlides = [];
 
-	for(let i = 0; i < triangles.length; i++) {
-		const triangle = triangles[i];
+	triangles.forEach(element => {
 		let longestSlide = 0;
 
-		for(let j = 0; j < triangle.length; j++) {
-			if(triangle[j] > longestSlide) {
-				longestSlide = triangle[j];
+		element.forEach(side => {
+			if(side > longestSlide) {
+				longestSlide = side;
 			}
-		}
+		});
 
 		longestSlides.push(longestSlide);
-
-	}
+	});
 
 	return longestSlides;
 
