@@ -77,14 +77,19 @@ export function findVerbs(words) {
 	// return verbs;
 
 	// for Each
-	const verbs = [];
+	// const verbs = [];
 
-	words.forEach(element => {
-		if(element.startsWith('to ')) {
-			verbs.push(element);
-		}
-	});
+	// words.forEach(element => {
+	// 	if(element.startsWith('to ')) {
+	// 		verbs.push(element);
+	// 	}
+	// });
 
+	// return verbs;
+
+	// filter
+
+	const verbs = words.filter(word => word.startsWith('to '));
 	return verbs;
 }
 
@@ -103,14 +108,18 @@ export function getIntegers(nums) {
 	// return arr;
 
 	// for Each
-	const arr = [];
+	// const arr = [];
 
-	nums.forEach(element => {
-		if(Number.isInteger(element)) {
-			arr.push(element);
-		}
-	});
+	// nums.forEach(element => {
+	// 	if(Number.isInteger(element)) {
+	// 		arr.push(element);
+	// 	}
+	// });
 
+	// return arr;
+
+	// filter
+	const arr = nums.filter(el => Number.isInteger(el));
 	return arr;
 }
 
@@ -127,12 +136,16 @@ export function getCities(users) {
 	// return userCity;
 
 	// for Each	 
-	const userCity = [];
+	// const userCity = [];
 
-	users.forEach(element => {
-		userCity.push(element.data.city.displayName);
-	});
+	// users.forEach(element => {
+	// 	userCity.push(element.data.city.displayName);
+	// });
 
+	// return userCity;
+
+	// map
+	const userCity = users.map(user => user.data.city.displayName);
 	return userCity;
 }
 
@@ -154,14 +167,22 @@ export function getSquareRoots(nums) {
 	// return numbers;
 
 	// for Each
+	// const numbers = [];
 
-	const numbers = [];
+	// nums.forEach(el => {
+	// 	const squareRoot = Math.sqrt(el);
+	// 	const roundedSquareRoot = squareRoot.toFixed(2);
+	// 	numbers.push(parseFloat(roundedSquareRoot));
+	// });
 
-	nums.forEach(el => {
+	// return numbers;
+
+	// map
+	const numbers = nums.map(el => {
 		const squareRoot = Math.sqrt(el);
 		const roundedSquareRoot = squareRoot.toFixed(2);
-		numbers.push(parseFloat(roundedSquareRoot));
-	});
+		return parseFloat(roundedSquareRoot);
+	})
 
 	return numbers;
 }
