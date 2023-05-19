@@ -50,7 +50,16 @@ export const sumArrays = (arrs) => {
 
 export const arrShift = (arr) => {
 	if (arr === undefined) throw new Error('arr is required');
-	// Your code here!
+
+	if(arr.length < 2) {
+		return arr;
+	}
+	
+	// destructuring method to swap first and last.
+	const [firstItem, ...middleItemsArray] = arr;
+	const lastItem = middleItemsArray.pop()
+
+	return [lastItem, ...middleItemsArray, firstItem];
 };
 
 export const findNeedle = (haystack, searchTerm) => {
