@@ -38,7 +38,14 @@ export const reverseNumber = (n) => {
 
 export const sumArrays = (arrs) => {
 	if (arrs === undefined) throw new Error('arrs is required');
-	// Your code here!
+	
+	// concat() the arrays into 1 array.
+	const sumArray = arrs.reduce((accumulator, currentArray) => accumulator.concat(currentArray), []);
+
+	// total the new array.
+	const total = sumArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+	return total;
 };
 
 export const arrShift = (arr) => {
