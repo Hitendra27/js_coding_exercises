@@ -12,6 +12,17 @@
  */
 export const sumMultiples = (arr) => {
 	if (arr === undefined) throw new Error('arr is required');
+	
+	// loop through the array
+	//if the number / 3 or 5 (%), add to a total
+	// return total
+	let total = 0;
+	arr.forEach(el => {
+		if(el % 3 === 0 || el % 5 === 0) {
+			total += el;
+		}
+	});
+	return total;
 };
 
 /**
@@ -39,6 +50,8 @@ export const getComplementaryDNA = (str) => {
  */
 export const isItPrime = (n) => {
 	if (n === undefined) throw new Error('n is required');
+
+	
 };
 
 /**
