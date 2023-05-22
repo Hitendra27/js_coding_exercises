@@ -8,6 +8,10 @@
  */
 export const sumDigits = (n) => {
 	if (n === undefined) throw new Error('n is required');
+
+	const sum = n.reduce((acc, digit) => acc + digit, 0);
+
+	return sum;
 };
 
 /**
@@ -25,6 +29,15 @@ export const createRange = (start, end, step) => {
 		console.log(
 			"FYI: Optional step parameter not provided. Remove this check once you've handled the optional step!"
 		);
+
+		const range = [];
+
+		for(let i = start; i <= end; i += step) {
+			range.push(i);
+		}
+
+		return range;
+
 };
 
 /**
