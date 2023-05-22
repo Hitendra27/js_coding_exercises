@@ -27,9 +27,15 @@ describe("isValidDNA", () => {
 });
 
 describe("getComplementaryDNA", () => {
-    test("get DNA", () => {
-        expect(getComplementaryDNA()).toBe();
-    })
+    test("returns the complementary DNA string for a valid input", () => {
+        expect(getComplementaryDNA('ACTG')).toBe('TGAC');
+        expect(getComplementaryDNA('GCTA')).toBe('CGAT');
+    });
+
+    test("throws an erro for an invalid DNA character", () => {
+        expect(getComplementaryDNA('ACTB')).toBe('Invalid DNA character: B');
+        expect(getComplementaryDNA('GCTA')).toBe('Invalid DNA character: X');
+    });
 });
 
 describe("isItPrime", () => {
