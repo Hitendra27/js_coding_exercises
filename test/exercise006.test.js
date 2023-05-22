@@ -15,9 +15,15 @@ describe("sumMultiples", () => {
 });
 
 describe("isValidDNA", () => {
-    test("checks for DNA", () => {
-        expect(isValidDNA()).toBe();
-    })
+    test("returns true for a valid DNA string", () => {
+        expect(isValidDNA(isValidDNA("CGTA"))).toBe(true);
+        expect(isValidDNA(isValidDNA("ACTG"))).toBe(true);
+    });
+
+    test("returns false for a invalid DNA string", () => {
+        expect(isValidDNA(isValidDNA("CGTB"))).toBe(false);
+        expect(isValidDNA(isValidDNA("GATTACA134"))).toBe(false);
+    });
 });
 
 describe("getComplementaryDNA", () => {
