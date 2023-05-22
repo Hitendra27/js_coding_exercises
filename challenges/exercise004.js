@@ -271,18 +271,21 @@ export function getLongestSides(triangles) {
 	// return longestSlides;
 
 	//map
-	const longestSlides = triangles.map(triangle => {
-		let longestSlide = 0;
+	// const longestSlides = triangles.map(triangle => {
+	// 	let longestSlide = 0;
 
-		triangle.forEach(side => {
-			if(side > longestSlide) {
-				longestSlide = side;
-			}
-		});
+	// 	triangle.forEach(side => {
+	// 		if(side > longestSlide) {
+	// 			longestSlide = side;
+	// 		}
+	// 	});
 
-		return longestSlide;
-	});
+	// 	return longestSlide;
+	// });
 
+	// return longestSlides;
+
+	//spread operator
+	const longestSlides = triangles.map(el => Math.max(...el));
 	return longestSlides;
-
 }
