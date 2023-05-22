@@ -4,7 +4,9 @@
 
 export function printColours(colours) {
 	if (!colours) throw new Error('colour is required');
-	// Your solution using the spread operator here!
+	
+	const cloneColours = [...colours];
+	return cloneColours;
 }
 
 export function shoppingList(list, newItem) {
