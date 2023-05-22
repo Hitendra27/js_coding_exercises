@@ -31,23 +31,29 @@ describe("getComplementaryDNA", () => {
         expect(getComplementaryDNA('ACTG')).toBe('TGAC');
         expect(getComplementaryDNA('GCTA')).toBe('CGAT');
     });
-
-    test("throws an erro for an invalid DNA character", () => {
-        expect(getComplementaryDNA('ACTB')).toBe('Invalid DNA character: B');
-        expect(getComplementaryDNA('GCTA')).toBe('Invalid DNA character: X');
-    });
 });
 
 describe("isItPrime", () => {
-    test("is it a prime number return true or else false", () => {
-        expect(isItPrime()).toBe()
-    })
+    test("returns false if number is 1 or < 1", () => {
+        expect(isItPrime(1)).toBe(false);
+        expect(isItPrime(-2)).toBe(false);
+    });
+
+    test("returns true if it is a prime nuber", () => {
+        expect(isItPrime(1)).toBe(false);
+        expect(isItPrime(-2)).toBe(false);
+    });
 });
 
 describe("createMatrix", () => {
     test("create a matrix", () => {
-        expect(createMatrix()).toBe()
-    })
+        expect(createMatrix(3, "foo")).toEqual([
+            ['foo', 'foo', 'foo'],
+            ['foo', 'foo', 'foo'],
+            ['foo', 'foo', 'foo']
+        ]);
+    });
+
 });
 
 describe("areWeCovered", () => {

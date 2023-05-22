@@ -35,7 +35,7 @@ export const isValidDNA = (str) => {
 
 	const validChars = ['C', 'G', 'T', 'A'];
 	// to iterate the str
-	const characters = str.split('');
+	const characters = [...str];
 
 	for(let char of characters) {
 		if(!validChars.includes(char)) {
