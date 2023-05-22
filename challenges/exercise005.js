@@ -73,5 +73,4 @@ export const findNeedle = (haystack, searchTerm) => {
 export const getWordFrequencies = (str) => {
 	if (str === undefined) throw new Error('str is required');
 	
-	//const frequencies = {};
 };

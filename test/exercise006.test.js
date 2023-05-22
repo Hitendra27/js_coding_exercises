@@ -39,7 +39,24 @@ describe("createMatrix", () => {
 });
 
 describe("areWeCovered", () => {
-    test("cover all the areas", () => {
-        expect(areWeCovered()).toBe()
+    test("it returns if there are not staff at all", () => {
+        expect(areWeCovered([], "Monday")).toBe(false);
+        expect(areWeCovered([], "Tuesday")).toBe(false);
+        expect(areWeCovered([], "Wednesday")).toBe(false);
+        expect(areWeCovered([], "Thursday")).toBe(false);
+        expect(areWeCovered([], "Friday")).toBe(false);
+        expect(areWeCovered([], "Saturday")).toBe(false);
+        expect(areWeCovered([], "Sunday")).toBe(false);
+    });
+
+    test("returns false if there are staff but < 3 not scheduled to work", () => {
+        const staff = [
+            {name: "Smith", rota: ["Tuesday", "Thursday"]},
+            {name: "James", rota: ["Tuesday", "Thursday"]},
+            {name: "Joe", rota: ["Tuesday", "Thursday"]},
+            {name: "Sarah", rota: ["Tuesday", "Thursday"]},
+            {name: "Carlos", rota: ["Tuesday", "Thursday"]}
+        ];
+        expect(areWeCovered(staff, "Thurday")).toBe(false);
     })
 });
