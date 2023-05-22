@@ -9,13 +9,14 @@ import {
 
 describe("sumDigits", () => {
     test("returns the sum of all its digits", () => {
-        expect(sumDigits()).toBe();
+        expect(sumDigits(123)).toBe(6);
+        expect(sumDigits(723).toBe(12));
     })
 });
 
 describe("createRange", () => {
     test("crates a range of number as an array", () => {
-        expect(createRange()).toBe()
+        expect(createRange(1, 5)).toEqual([1, 2, 3, 4, 5]);
     })
 });
 
