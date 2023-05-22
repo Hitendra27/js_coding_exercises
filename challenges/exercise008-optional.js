@@ -25,12 +25,15 @@ export function highestNumber(numbers) {
 
 export function splitThatString(string) {
 	if (!string) throw new Error('string is required');
-	// Your solution using the spread operator here!
+	
+	const splitString = [...string];
+	return splitString;
 }
 
 // Optional Chaining Bonus activity!
 
 export function addressLookUp(user) {
 	if (!user) throw new Error('user is required');
-	// Your solution using optional chaining here!
+	
+	return user?.address?.postcode;
 }
