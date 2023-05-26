@@ -7,19 +7,16 @@
 export function capitalize(word) {
 	if (word === undefined) throw new Error('word is required');
 
-	const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+	return word.charAt(0).toUpperCase() + word.slice(1);
 
-	return capitalized;
+	
 }
 
 export function generateInitials(firstName, lastName) {
 	if (firstName === undefined) throw new Error('firstName is required');
 	if (lastName === undefined) throw new Error('lastName is required');
 
-	const firstNameIn = firstName[0].charAt(0).toUpperCase()
-	const lastNameIn = lastName.charAt(0).toUpperCase()
-
-	return `${firstNameIn}.${lastNameIn}`
+	return `${firstName[0]}.${lastName[0]}`;
 }
 
 export function addVAT(originalPrice, vatRate) {
@@ -56,29 +53,24 @@ export function getMiddleCharacter(str) {
 export function reverseWord(word) {
 	if (word === undefined) throw new Error('word is required');
 	
-	const arrayStrings = word.split("");
 
-	const reverseArray = arrayStrings.reverse();
-
-	const joinArray = reverseArray.join("");
-
-	return joinArray;
+	return word.split('').reverse().join('');
 }
 
 export function reverseAllWords(words) {
 	if (words === undefined) throw new Error('words is required');
 	
-	const reversedWords = words.map(word => word.split('').reverse().join(''));
+	//return words.map(word => word.split('').reverse().join(''));
 
-	return reversedWords;
+	return words.map(word => reverseWord(word));
+
 }
 
 export function countLinuxUsers(users) {
 	if (users === undefined) throw new Error('users is required');
 	
-	const linuxUsers = users.filter(user =>  user.type === 'Linux') ;
+	return users.filter(user =>  user.type === 'Linux').length ;
 
-	return linuxUsers.length;
 }
 
 export function getMeanScore(scores) {
